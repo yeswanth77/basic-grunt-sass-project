@@ -1,0 +1,476 @@
+.header {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 20px;
+	background: #CCC;
+}
+
+.jumbotron {
+  color: white;
+  text-shadow: #444 0 1px 1px;
+}
+
+.homeheader {
+	background: url('../images/header.jpg') no-repeat center center;
+	margin-bottom: 0;
+
+	& .container {
+		margin-top: 72px;
+		& h1 {
+			font-family: $Medium;
+		}
+
+		& h2 {
+			font-family: $Light;
+			font-size: 25px;
+
+			@include tablet {
+				font-size: 40px;
+			}
+		}
+
+		& a i {
+			margin: 3px 12px 0 0;
+			float: left;
+		}
+	}
+}
+
+.carousel {
+
+	& .carousel-inner {
+		max-height: 480px;
+
+		& .item {
+			max-height: 480px;
+		}
+	}
+
+	& h1 {
+		font-size: 15px;
+		font-family: $Regular;
+
+		@include tablet {
+			font-size: 55px;
+		}
+
+		@include desktop {
+			font-size: 65px;
+		}
+	}
+
+	& .carousel-caption {
+		bottom: 10%;
+		@include tablet {
+			bottom: 5%;
+		}
+
+		@include desktop {
+			bottom: 20%;
+		}
+	}
+
+	& .btn-success {
+		padding: 10px;
+		font-size: 10px;
+
+		@include tablet {
+			padding: 15px 48px;
+			font-size: 24px;
+		}
+
+		@include desktop {
+			padding: 15px 48px;
+			font-size: 24px;
+		}
+	}
+
+	& .searchform {
+		padding: 20px;
+		font-size: 18px;
+	}
+
+	& .btn-tld {
+		border: 0;
+		box-shadow: none;
+		padding: 11px;
+		font-size: 18px;
+		border-radius: 0 4px 4px 0;
+		outline: 0;
+	}
+}
+
+.navbar {
+	background: transparent;
+	margin-bottom: 0;
+	padding: 20px 0px;
+	width: 100%;
+	border-radius: 0;
+	border: none;
+	z-index: 20;
+}
+
+.navbar-default {
+	& .navbar-nav {
+		& li {
+			& a {
+				color: #FFF;
+				font-family: $Medium;
+				text-transform: uppercase;
+				@include transition(all, 0.2s, ease-in-out);
+				&:hover {
+					color: #FFF;
+					background: $purple;
+					@include border-radius(3px);
+				}
+
+				&:focus {
+					@include border-radius(3px 3px 0 0);
+				}
+
+				&.loginnav {
+					background: $purple;
+					color: #FFF;
+					@include border-radius(0);
+					box-shadow: inset 0 -3.2px rgba(0, 0, 0, 0.12), inset 0 0 rgba(0, 0, 0, 0.1);
+
+					&:hover {
+						background: $lightpurple;
+					}
+				}
+
+				& i {
+					margin-right: 10px;
+
+					&.glyphicon-cloud {
+						float: left;
+						margin-top: 2px;
+					}
+				}
+			}
+
+			&:hover {
+				background: $purple;
+
+				& a {
+					color: #FFF;
+				}
+			}
+
+			& ul {
+				background: $lightpurple;
+				& li {
+					& a {
+						padding: 10px 17px;
+						color: #FFF;
+						&:hover {
+							background: $purple;
+							color: #FFF;
+						}
+
+						&:active {
+							color: #FFF;
+						}
+					}
+
+					& ul {
+						& li {
+							& a {
+								color: #FFF;
+							}
+						}
+					}
+				}
+			}
+		}
+		& .active {
+			& a {
+				background-color: transparent;
+				color: #FFF;
+				text-transform: uppercase;
+				@include transition(all, 0.2s, ease-in-out);
+				&:hover {
+					background: $purple;
+					color: #FFF;
+					@include border-radius(3px);
+				}
+			}
+		}
+
+		& .open {
+			& a {
+				&:focus {
+					background: $purple;
+					color: #FFF;
+				}
+
+				&:active {
+					background: $purple;
+					color: #FFF;
+				}
+			}
+
+			& .dropdown-menu {
+				& li {
+					& a {
+						color: #FFF;
+						&:hover {
+							color: $lightpurple;
+							background: #FFF;
+						}
+					}
+				}
+			}
+		}
+
+		& .form-control {
+			margin-bottom: 10px;
+			width: 200px;
+		}
+	}
+
+	& .navbar-collapse {
+		background: $lightpurple;
+		border-top: 0;
+		@include tablet {
+			background: $lightpurple;
+		}
+
+		@include desktop {
+			background: transparent;
+		}
+	}
+
+	.navbar-toggle {
+		background: transparent;
+		border: none;
+
+		&:hover {
+			background: transparent;
+
+			& .icon-bar {
+				background: $purple;
+			}
+		}
+
+		&:focus {
+			background: transparent;
+		}
+
+		& .icon-bar {
+			background: #FFF;
+			height: 4px;
+		}
+	}
+}
+
+.navbar-brand {
+	padding: 0;
+	height: auto;
+	margin: 0;
+
+	@include tablet {
+		margin: 13px 0 0 0;
+	}
+
+	@include desktop {
+		margin: 13px 10px 0 0;
+	}
+
+	& img {
+		width: 103px;
+		color: #FFF;
+	}
+
+	& .logoone {
+		width: 50px;
+		color: #FFF;
+		margin: 0 5px 0 10px;
+		float: left;
+
+		@include tablet {
+			width: 103px;
+		}
+
+		@include desktop {
+			width: 103px;
+		}
+	}
+
+	& .logotwo {
+		width: 56px;
+		color: #FFF;
+		margin: 0 10px 0 0;
+		float: left;
+
+		@include tablet {
+			width: 115px;
+		}
+
+		@include desktop {
+			width: 115px;
+		}
+	}
+
+	& i {
+		color: #FFF;
+		font-size: 15px;
+		display: inline-block;
+		font-weight: normal;
+		padding: 0;
+		margin-top: 15px;
+		@include tablet {
+			font-size: 22px;
+			margin-top: 0;
+		}
+
+		@include desktop {
+			font-size: 22px;
+			margin-top: 0;
+		}
+	}
+
+	& .icon-icreate {
+		width: 78px;
+		margin-left: 10px;
+		@include tablet {
+			width: 117px;
+		}
+
+		@include desktop {
+			width: 117px;
+		}
+	}
+
+	& .icon-hosting {
+		width: 90px;
+		@include tablet {
+			width: 129px;
+		}
+
+		@include desktop {
+			width: 129px;
+		}
+	}
+}
+
+.affix-top {
+	position: absolute;
+	top: 0;
+	padding-top: 0;
+}
+
+.affix, .affix-bottom {
+	background: #FFF;
+	width: 100%;
+	border-radius: 0;
+	padding: 0;
+	@include box-shadow(0, 0, 6px, #666, false);
+	@include transition(all, 0.3s, ease-in-out);
+
+	& .navbar-toggle .icon-bar {
+		background: $purple;
+	}
+
+	& .navbar-nav {
+		& li {
+			& a {
+				color: #FFF;
+				@include tablet {
+					color: #FFF;
+				}
+
+				@include desktop {
+					color: $purple;
+				}
+				
+				&:visited {
+					color: #FFF;
+					@include tablet {
+						color: #FFF;
+					}
+
+					@include desktop {
+						color: $purple;
+					}
+				}
+
+				&:hover {
+					@include border-radius(0);
+					color: #FFF;
+					background: $purple;
+				}
+
+				&.loginnav {
+					color: #FFF;
+				}
+			}
+
+			&:hover {
+				background: $purple;
+
+				& a {
+					color: #FFF;
+				}
+			}
+
+			& ul {
+				& li {
+					& a {
+						color: #FFF;
+						&:visited {
+							color: #FFF;
+						}
+					}
+				}
+			}
+		}
+
+		& .open {
+
+			& .dropdown-menu {
+				& li {
+					& a {
+						color: #FFF;
+					}
+				}
+			}
+		}
+	}
+
+	& .navbar-brand {
+
+		& i {
+			color: #333;
+		}
+
+		& .icon-icreate {
+			margin: 18px 0 0 10px;
+			width: 78px;
+			@include tablet {
+				margin-top: 4px;
+				width: 117px;
+			}
+
+			@include desktop {
+				margin-top: 0;
+				width: 117px;
+			}
+		}
+
+		& .icon-hosting {
+			margin: 18px 0 0 0;
+			width: 90px;
+			color: $purple;
+			@include tablet {
+				margin-top: 0;
+				width: 129px;
+			}
+
+			@include desktop {
+				margin-top: 0;
+				width: 129px;
+			}
+		}
+	}
+}

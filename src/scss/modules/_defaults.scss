@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $Medium, Arial, Verdana;
+  font-weight: normal;
+  background: #FFF;
+  color: #444;
+}
+
+a {
+	font-weight: normal;
+}
+
+.need-help {
+
+  margin-bottom: 0;
+
+  @include tablet {
+    height: 335px;
+  }
+
+  @include desktop {
+    height: 415px;
+  }
+
+  & h1 {
+    font-size: 20px;
+    font-family: $Light;
+
+    @include tablet {
+      font-size: 36px;
+    }
+
+    @include desktop {
+      font-size: 63px;
+    }
+  }
+
+  & .lead {
+    font-size: 14px;
+
+    @include tablet {
+      font-size: 21px;
+    }
+
+    @include desktop {
+      font-size: 21px;
+    }
+  }
+}
+
+.lightblue {
+	background: $lightblue;
+}
+
+.purplefluid {
+  background: $purple;
+}
+
+.babyblue {
+  background: $babyblue;
+}
